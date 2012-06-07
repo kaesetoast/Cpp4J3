@@ -9,5 +9,6 @@ HEADERS += \
     pair.h \
     Less.h \
     Greater.h \
-    MapToFirst.h
+    MapToFirst.h \
+    Tree.h
 
