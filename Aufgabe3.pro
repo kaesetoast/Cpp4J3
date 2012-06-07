@@ -10,5 +10,7 @@ HEADERS += \
     Less.h \
     Greater.h \
     MapToFirst.h \
-    Tree.h
+    Tree.h \
+    TreeNode.h \
+    TreeIterator.h
 
