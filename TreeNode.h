@@ -1,6 +1,6 @@
 #ifndef TREENODE_H
 #define TREENODE_H
-#include "Tree.h"
+
 namespace mystl {
 
     template<typename T, typename O>
