@@ -27,4 +27,5 @@ namespace mystl {
     };
 }
 
+#include "Tree.cpp"
 #endif // TREE_H
