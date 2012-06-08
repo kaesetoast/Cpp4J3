@@ -16,8 +16,8 @@ using namespace std;
 #include "Less.h"
 #include "Greater.h"
 #include "MapToFirst.h"
+#include "Tree.h"
 //#include "order.h"
-//#include "tree.h"
 //#include "map.h"
 
 // you should define your own namespace for
@@ -103,8 +103,6 @@ int main()
     MapToFirst<int, float, Greater > greaterPair;
     assert(greaterPair(i_f, i_f2) == false);
 
-#if 0 // move this line down while your implementation proceeds...
-
     /////////////////////////////////////////
     // TEST TREE
 
@@ -112,6 +110,8 @@ int main()
     Tree<int> t;
     cout << "empty tree: ";
     assert(printAndCount(t) == 0);
+
+#if 0 // move this line down while your implementation proceeds...
 
     // insert elements in a certain order
     t.insert(4);

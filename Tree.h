@@ -2,13 +2,18 @@
 #define TREE_H
 #include "TreeNode.h"
 #include "TreeIterator.h"
-namespace mystl {
-    typedef TreeIterator<T, O> iterator;
-    typedef TreeNode<T, O> node;
+#include "Less.h"
 
-    template<typename T, typename O>
+namespace mystl {
+
+    template<typename T, typename O = Less<T> >
     class Tree {
     public:
+        typedef TreeIterator<T, O> iterator;
+        typedef TreeNode<T, O> node;
+
+        Tree();
+
         iterator insert(const T& value);
         void clear();
         iterator begin();
@@ -18,7 +23,7 @@ namespace mystl {
         iterator find(const T& value);
 
     private:
-        TreeNode<T, O> m_root;
+        TreeNode<T, O>* m_root;
     };
 }
 

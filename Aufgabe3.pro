@@ -3,7 +3,7 @@ CONFIG += console
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    pair.cpp
+    Tree.cpp
 
 HEADERS += \
     pair.h \

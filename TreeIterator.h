@@ -8,7 +8,6 @@ namespace mystl {
     public:
         TreeIterator(TreeNode<T, O> node)
             : m_node(node){
-
         }
 
         T& operator*();
@@ -19,8 +18,8 @@ namespace mystl {
         bool operator!=(const TreeIterator<T, O>&);
 
     private:
-        Tree<T, O> m_tree;
-        TreeNode<T, O> m_node;
+        Tree<T, O>* m_tree;
+        TreeNode<T, O>* m_node;
     };
 }
 #endif // TREEITERATOR_H
