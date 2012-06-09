@@ -25,6 +25,9 @@ namespace mystl {
     private:
         TreeNode<T, O>* m_root;
     };
+
+    // Lösung 3: zusätzlich explizite Instanziierung (s. Skript U06 S.11)
+    template class Tree<int>;
 }
 
 #include "Tree.cpp"
