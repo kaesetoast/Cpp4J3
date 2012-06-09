@@ -12,7 +12,7 @@ T& TreeIterator<T, O>::operator*() {
 
 template<typename T, typename O>
 T* TreeIterator<T, O>::operator->() {
-
+    return &(m_node->value());
 }
 
 template<typename T, typename O>
