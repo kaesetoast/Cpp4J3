@@ -6,7 +6,7 @@ namespace mystl {
     template<typename T, typename O>
     class TreeIterator {
     public:
-        TreeIterator(TreeNode<T, O> node)
+        TreeIterator(TreeNode<T, O>* node)
             : m_node(node){
         }
 

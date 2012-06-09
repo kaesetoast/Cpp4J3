@@ -109,7 +109,7 @@ int main()
     // construct empty tree
     Tree<int> t;
     cout << "empty tree: ";
-    //assert(printAndCount(t) == 0);
+//    assert(printAndCount(t) == 0);
 
 #if 0 // move this line down while your implementation proceeds...
 
