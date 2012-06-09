@@ -4,7 +4,8 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     Tree.cpp \
-    TreeIterator.cpp
+    TreeIterator.cpp \
+    TreeNode.cpp
 
 HEADERS += \
     pair.h \

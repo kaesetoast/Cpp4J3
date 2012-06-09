@@ -22,7 +22,7 @@ bool TreeIterator<T, O>::operator ==(const TreeIterator<T, O>& rhs) {
 
 template<typename T, typename O>
 bool TreeIterator<T, O>::operator !=(const TreeIterator<T, O>& rhs) {
-    return !(this == rhs);
+    return !(m_tree == rhs.m_tree && m_node == rhs.m_node);
 }
 
 #endif
