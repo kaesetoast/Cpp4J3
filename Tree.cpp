@@ -16,6 +16,6 @@ Tree<T, O>::Tree() {
 }
 
 //Lösung 3: zusätzlich explizite Instanziierung (s. Skript U06 S. 11)
-template Tree<int>::Tree();
+template class Tree<int>;
 
 #endif
