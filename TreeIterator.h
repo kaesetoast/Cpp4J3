@@ -22,4 +22,6 @@ namespace mystl {
         TreeNode<T, O>* m_node;
     };
 }
+
+#include "TreeIterator.cpp"
 #endif // TREEITERATOR_H
