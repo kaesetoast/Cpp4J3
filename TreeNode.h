@@ -28,4 +28,6 @@ namespace mystl {
         T m_value;
     };
 }
+
+#include "TreeNode.cpp"
 #endif // TREENODE_H
