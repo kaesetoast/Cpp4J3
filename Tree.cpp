@@ -35,4 +35,9 @@ TreeIterator<T, O> Tree<T, O>::find(const T& value) {
     return TreeIterator<T, O> (m_root->find(value));
 }
 
+template<typename T, typename O>
+TreeIterator<T, O> Tree<T, O>::end() {
+    return TreeIterator<T, O>(0);
+}
+
 #endif
