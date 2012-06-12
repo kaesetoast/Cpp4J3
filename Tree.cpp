@@ -22,12 +22,17 @@ TreeIterator<T, O> Tree<T, O>::begin() {
 
 template<typename T, typename O>
 TreeIterator<T, O> Tree<T, O>::first() {
-    return m_root->findFirst();
+    return TreeIterator<T, O> (m_root->findFirst());
 }
 
 template<typename T, typename O>
 TreeIterator<T, O> Tree<T, O>::last() {
-    return m_root->findLast();
+    return TreeIterator<T, O> (m_root->findLast());
+}
+
+template<typename T, typename O>
+TreeIterator<T, O> Tree<T, O>::find(const T& value) {
+    return TreeIterator<T, O> (m_root->find(value));
 }
 
 #endif
