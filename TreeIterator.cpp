@@ -28,7 +28,8 @@ bool TreeIterator<T, O>::operator !=(const TreeIterator<T, O>& rhs) {
 template<typename T, typename O>
 TreeIterator<T, O>& TreeIterator<T, O>::operator++() {
     if (m_node->m_left != 0) {
-        return m_node->m_left->begin();
+        m_tree = m_node->m_left;
+        return m_tree->begin();
     } else if(m_node->m_right != 0) {
         return TreeIterator<T, O>(m_node->m_right->begin());
     } else {

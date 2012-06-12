@@ -21,9 +21,10 @@ namespace mystl {
         iterator first();
         iterator last();
         iterator find(const T& value);
+        node& root();
 
     private:
-        TreeNode<T, O>* m_root;
+        node* m_root;
     };
 
     // Lösung 3: zusätzlich explizite Instanziierung (s. Skript U06 S.11)

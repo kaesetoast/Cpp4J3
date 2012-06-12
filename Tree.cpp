@@ -40,4 +40,9 @@ TreeIterator<T, O> Tree<T, O>::end() {
     return TreeIterator<T, O>(0);
 }
 
+template<typename T, typename O>
+TreeNode<T, O>& Tree<T, O>::root() {
+    return *m_root;
+}
+
 #endif

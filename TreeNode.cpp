@@ -12,7 +12,7 @@ TreeNode<T, O>* TreeNode<T, O>::findFirst() {
     if (m_left == 0) {
         return this;
     } else {
-        return m_left->findFirst();
+        return m_left->root().findFirst();
     }
 }
 
@@ -21,7 +21,7 @@ TreeNode<T, O>* TreeNode<T, O>::findLast() {
     if (m_right == 0) {
         return this;
     } else {
-        return m_right->findLast();
+        return m_right->root().findLast();
     }
 }
 
@@ -33,15 +33,15 @@ TreeNode<T, O>* TreeNode<T, O>::find(const T &value) {
     }
     if (op(m_value, value)) {
         if (m_left == 0) {
-            return m_left;
+            return &m_left->root();
         } else {
-            return m_left->find(value);
+            return m_left->root().find(value);
         }
     } else {
         if (m_right == 0) {
-            return m_right;
+            return &m_right->root();
         } else {
-            return m_right->find(value);
+            return m_right->root().find(value);
         }
     }
 }
