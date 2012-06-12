@@ -20,4 +20,14 @@ TreeIterator<T, O> Tree<T, O>::begin() {
     return TreeIterator<T, O> (m_root);
 }
 
+template<typename T, typename O>
+TreeIterator<T, O> Tree<T, O>::first() {
+    return m_root->findFirst();
+}
+
+template<typename T, typename O>
+TreeIterator<T, O> Tree<T, O>::last() {
+    return m_root->findLast();
+}
+
 #endif
