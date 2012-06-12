@@ -5,6 +5,7 @@
 
 using namespace mystl;
 
+// TODO: Unterschied Less, Greater?
 template<typename T, typename O>
 TreeNode<T, O>* TreeNode<T, O>::findFirst() {
     if (m_left == 0) {
