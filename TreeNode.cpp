@@ -2,6 +2,7 @@
 #define TREENODE_CPP
 
 #include "TreeNode.h"
+#include "Tree.h"
 
 using namespace mystl;
 
