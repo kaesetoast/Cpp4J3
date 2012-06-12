@@ -26,6 +26,9 @@ TreeNode<T, O>* TreeNode<T, O>::findLast() {
 template<typename T, typename O>
 TreeNode<T, O>* TreeNode<T, O>::find(const T &value) {
     O op;
+    if (m_value == value) {
+        return this;
+    }
     if (op(m_value, value)) {
         if (m_left == 0) {
             return m_left;
