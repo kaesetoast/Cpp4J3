@@ -45,4 +45,16 @@ TreeNode<T, O>* TreeNode<T, O>::find(const T &value) {
     }
 }
 
+template<typename T, typename O>
+TreeIterator<T, O> TreeNode<T, O>::backTracking() {
+    if (m_up == 0) {
+        return TreeIterator<T, O>(0);
+    }
+    else if (&m_up->m_right == &this) {
+        return m_up->backTracking();
+    } else {
+        return TreeIterator<T, O>(m_up->m_right);
+    }
+}
+
 #endif

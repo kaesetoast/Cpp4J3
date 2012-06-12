@@ -20,6 +20,7 @@ namespace mystl {
         TreeNode<T, O>* find(const T&);
         TreeNode<T, O>* findFirst();
         TreeNode<T, O>* findLast();
+        TreeIterator<T, O> backTracking();
     protected:
         Tree<T, O>* m_left;
         Tree<T, O>* m_right;
