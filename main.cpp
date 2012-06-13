@@ -32,10 +32,12 @@ using namespace mystl;
 // list and count all nodes in a set using an iterator
 template<class Container>
 int printAndCount(Container & c) {
-
+    cout << "Starte count";
     int n=0;
-    for(typename Container::iterator i=c.begin(); i!=c.end(); ++i, ++n)
+    for(typename Container::iterator i=c.begin(); i!=c.end(); ++i, ++n) {
+        cout << "iteration " << n;
         cout << *i << " ";
+    }
 
     cout << "(" << n << " elements)." << endl;
 

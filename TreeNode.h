@@ -1,6 +1,8 @@
 #ifndef TREENODE_H
 #define TREENODE_H
 
+#include "Less.h"
+
 namespace mystl {
 
     template<typename T, typename O>
@@ -27,6 +29,8 @@ namespace mystl {
         TreeNode<T, O>* m_up;
         T m_value;
     };
+
+    template class TreeNode<int, Less<int> >;
 }
 
 #include "TreeNode.cpp"

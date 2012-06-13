@@ -39,7 +39,6 @@ TreeIterator<T, O>& TreeIterator<T, O>::operator++() {
         return *this;
 
     } else {
-
         *this = m_node->backTracking();
         return *this;
     }

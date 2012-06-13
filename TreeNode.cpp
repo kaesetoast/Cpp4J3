@@ -47,6 +47,11 @@ TreeNode<T, O>* TreeNode<T, O>::find(const T &value) {
 }
 
 template<typename T, typename O>
+T& TreeNode<T, O>::value() {
+    return m_value;
+}
+
+template<typename T, typename O>
 TreeIterator<T, O> TreeNode<T, O>::backTracking() {
     if (m_up == 0) {
         return TreeIterator<T, O>(0);
