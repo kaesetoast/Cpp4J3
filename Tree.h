@@ -16,6 +16,10 @@ namespace mystl {
             : m_root(0) {
         }
 
+        Tree(node *node)
+            : m_root(node) {
+        }
+
         iterator insert(const T& value);
         void clear();
         iterator begin();
@@ -23,7 +27,7 @@ namespace mystl {
         iterator first();
         iterator last();
         iterator find(const T& value);
-        node& root();
+        node* root();
 
     private:
         node* m_root;
