@@ -11,11 +11,6 @@
 using namespace mystl;
 
 template<typename T, typename O>
-Tree<T, O>::Tree() {
-    m_root = 0;
-}
-
-template<typename T, typename O>
 TreeIterator<T, O> Tree<T, O>::begin() {
     return TreeIterator<T, O> (m_root);
 }

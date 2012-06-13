@@ -12,7 +12,9 @@ namespace mystl {
         typedef TreeIterator<T, O> iterator;
         typedef TreeNode<T, O> node;
 
-        Tree();
+        Tree()
+            : m_root(0) {
+        }
 
         iterator insert(const T& value);
         void clear();
