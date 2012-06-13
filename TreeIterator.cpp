@@ -25,6 +25,7 @@ bool TreeIterator<T, O>::operator !=(const TreeIterator<T, O>& rhs) {
     return !(m_tree == rhs.m_tree && m_node == rhs.m_node);
 }
 
+// TODO: Speicher-Leck
 template<typename T, typename O>
 TreeIterator<T, O>& TreeIterator<T, O>::operator++() {
     if (m_node->m_left != 0) {
