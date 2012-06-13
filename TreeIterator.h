@@ -2,12 +2,19 @@
 #define TREEITERATOR_H
 #include "Tree.h"
 #include "TreeNode.h"
+#include <stdlib.h>
+
 namespace mystl {
     template<typename T, typename O>
     class TreeIterator {
     public:
         TreeIterator(TreeNode<T, O>* node)
             : m_node(node){
+        }
+
+        ~TreeIterator() {
+            free(m_tree);
+            free(m_node);
         }
 
         T& operator*();

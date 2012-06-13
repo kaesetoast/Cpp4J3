@@ -2,6 +2,7 @@
 #define TREENODE_H
 
 #include "Less.h"
+#include <stdlib.h>
 
 namespace mystl {
 
@@ -18,7 +19,13 @@ namespace mystl {
 
     public:
         TreeNode(const T &value = T(), TreeNode<T, O>* up = 0)
-            : m_value(value), m_up(up) {
+            : m_value(value), m_up(up), m_left(0), m_right(0) {
+        }
+
+        ~TreeNode() {
+            free(m_up);
+            free(m_left);
+            free(m_right);
         }
 
         T& value();

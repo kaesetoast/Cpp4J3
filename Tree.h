@@ -3,6 +3,7 @@
 #include "TreeNode.h"
 #include "TreeIterator.h"
 #include "Less.h"
+#include <stdlib.h>
 
 namespace mystl {
 
@@ -18,6 +19,10 @@ namespace mystl {
 
         Tree(node *node)
             : m_root(node) {
+        }
+
+        ~Tree() {
+            free(m_root);
         }
 
         iterator insert(const T& value);
