@@ -7,6 +7,7 @@
 #define TREE_CPP
 
 #include "Tree.h"
+#include <stdlib.h>
 
 using namespace mystl;
 
@@ -21,7 +22,18 @@ TreeIterator<T, O> Tree<T, O>::insert(const T &value) {
         if(op(value, m_root->value())) {
 
             if (m_root->m_left == 0) {
-                m_root->m_left = new Tree<T, O> (new TreeNode<T, O>(value, m_root));
+                // Geht nicht:
+                // m_root->m_left = new Tree<T, O> (new TreeNode<T, O>(value, m_root));
+
+                // Geht auch nicht:
+                // m_root->m_left = new Tree<T, O> (value, m_root);
+
+                // Geht:
+                m_root->m_left = new Tree<T, O> ();
+                cout << "!!!!!!!!!!!!!!!!!!!!!!-";
+                return 0;
+
+
                 return TreeIterator<T, O> (m_root->m_left->root());
             } else {
                 return m_root->m_left->insert(value);

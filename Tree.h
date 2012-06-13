@@ -21,6 +21,10 @@ namespace mystl {
             : m_root(node) {
         }
 
+        Tree(const T &value, TreeNode<T, O>* up) {
+            m_root = new TreeNode<T, O>(value, up);
+        }
+
         ~Tree() {
             free(m_root);
         }
