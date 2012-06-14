@@ -8,13 +8,14 @@ namespace mystl {
     template<typename T, typename O>
     class TreeIterator {
     public:
-        TreeIterator(TreeNode<T, O>* node)
-            : m_node(node), m_tree(0) {
+        TreeIterator(TreeNode<T, O>* node) {
+            this->m_node = node;
+            this->m_tree = 0;
         }
 
         ~TreeIterator() {
-            free(m_tree);
-            free(m_node);
+            free(this->m_tree);
+            free(this->m_node);
         }
 
         T& operator*();

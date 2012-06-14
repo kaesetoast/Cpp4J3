@@ -18,8 +18,11 @@ namespace mystl {
         friend class Tree<T, O>;
 
     public:
-        TreeNode(const T &value = T(), TreeNode<T, O>* up = 0)
-            : m_value(value), m_up(up), m_left(0), m_right(0) {
+        TreeNode(const T& value = T(), TreeNode<T, O>* up = 0) {
+            this->m_value = value;
+            this->m_up = up;
+            this->m_left = 0;
+            this->m_right = 0;
         }
 
         ~TreeNode() {

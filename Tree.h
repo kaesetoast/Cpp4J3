@@ -13,20 +13,16 @@ namespace mystl {
         typedef TreeIterator<T, O> iterator;
         typedef TreeNode<T, O> node;
 
-        Tree()
-            : m_root(0) {
+        Tree(node *node = 0) {
+            this->m_root = node;
         }
 
-        Tree(node *node)
-            : m_root(node) {
-        }
-
-        Tree(const T &value, TreeNode<T, O>* up) {
-            m_root = new TreeNode<T, O>(value, up);
+        Tree(const T& value, TreeNode<T, O>* up) {
+            this->m_root = new TreeNode<T, O>(value, up);
         }
 
         ~Tree() {
-            free(m_root);
+            free(this->m_root);
         }
 
         iterator insert(const T& value);
