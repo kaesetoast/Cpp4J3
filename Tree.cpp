@@ -29,8 +29,8 @@ TreeIterator<T, O> Tree<T, O>::insert(const T &value) {
                 // m_root->m_left = new Tree<T, O> (value, m_root);
 
                 // Geht:
-                m_root->m_left = new Tree<T, O> ();
-                cout << "!!!!!!!!!!!!!!!!!!!!!!-";
+                // m_root->m_left = new Tree<T, O> ();
+                cout << "!!!!!!!!!!!!!!!!!!!!!!-" << endl;
                 return 0;
 
 

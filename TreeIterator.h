@@ -14,8 +14,8 @@ namespace mystl {
         }
 
         ~TreeIterator() {
-            free(this->m_tree);
-            free(this->m_node);
+            delete this->m_tree;
+            delete this->m_node;
         }
 
         T& operator*();

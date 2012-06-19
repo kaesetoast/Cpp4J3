@@ -26,9 +26,8 @@ namespace mystl {
         }
 
         ~TreeNode() {
-            free(m_up);
-            free(m_left);
-            free(m_right);
+            delete m_left;
+            delete m_right;
         }
 
         T& value();

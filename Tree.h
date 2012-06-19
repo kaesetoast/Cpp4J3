@@ -22,7 +22,7 @@ namespace mystl {
         }
 
         ~Tree() {
-            free(this->m_root);
+            delete this->m_root;
         }
 
         iterator insert(const T& value);
